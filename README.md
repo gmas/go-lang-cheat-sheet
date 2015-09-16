@@ -344,6 +344,12 @@ a = make([]byte, 5)	// capacity is optional
 // create a slice from an array
 x := [3]string{"Лайка", "Белка", "Стрелка"}
 s := x[:] // a slice referencing the storage of x
+
+//append (concatenate) slice to another slice
+a := []int{1,2}
+b := []int{3,4,5}
+c := append(a, b...) // ... (ellipsis) passes each element of b
+fmt.Printf("c = %d", c) //c = [1 2 3 4 5] 
 ```
 
 ### Operations on Arrays and Slices
